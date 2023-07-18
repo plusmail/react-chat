@@ -1,6 +1,6 @@
 import httpClient from './httpClient'
 
-const host = 'localhost'
+const host = 'chat.yi.or.kr'
 const service = `conference.${host}`
 
 const rooms = {

@@ -9,10 +9,12 @@ const createXmppClient = data => {
   jid = jid || XMPP.JID.create({ local, domain })
 
   const HOSTNAME = window ? window.location.hostname : domain
+
+  console.log("creaetXmppClient->", HOSTNAME)
   const options = {
     transports: {
-      websocket: `ws://${HOSTNAME}:5443/ws`,
-      bosh: `http://${HOSTNAME}:5443/bosh`
+      websocket: `ws://${HOSTNAME}:5281/ws`,
+      bosh: `http://${HOSTNAME}:5281/bosh`
     },
     allowResumption: true,
     useStreamManagement: true,
@@ -31,6 +33,7 @@ const createXmppClient = data => {
 
   xmppClient.connect()
   store.dispatch(setClient(xmppClient))
+  console.log("11111111111111->",xmppClient);
   return xmppClient
 }
 

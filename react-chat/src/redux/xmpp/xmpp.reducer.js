@@ -1,7 +1,7 @@
 import { types } from './xmpp.actions'
 
 const INITIAL_STATE = {
-  host: 'localhost',
+  host: 'chat.yi.or.kr',
   client: null,
   jid: '',
   password: '',

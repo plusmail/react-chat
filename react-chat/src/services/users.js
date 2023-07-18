@@ -1,6 +1,6 @@
 import httpClient from './httpClient'
 
-const host = 'localhost'
+const host = 'chat.yi.or.kr'
 
 const users = {
   register: async (user) => {
@@ -20,7 +20,7 @@ const users = {
       return { data: null, error }
     }
   },
-  
+
   connected: async () => {
     try {
       const { data, error } = await httpClient.post('connected_users_vhost', { host })
@@ -29,7 +29,7 @@ const users = {
       return { data: null, error }
     }
   },
-  
+
   update: async (userToUpdate) => {
     try {
       const { user, password: newpass } = userToUpdate
